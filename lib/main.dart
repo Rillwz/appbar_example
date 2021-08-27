@@ -27,11 +27,15 @@ class MyApp extends StatelessWidget {
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
-            colors: [
-              Color(0xff0096ff),
-              Color(0xff6610f2),
-            ],
-          )),
+                colors: [Color(0xff0096ff), Color(0xff6610f2)],
+                begin: FractionalOffset.topLeft,
+                end: FractionalOffset.bottomRight,
+              ),
+              image: DecorationImage(
+                image: AssetImage('assets/patern.png'),
+                fit: BoxFit.none,
+                repeat: ImageRepeat.repeat,
+              )),
         ),
       ),
     ));
